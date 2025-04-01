@@ -5,8 +5,8 @@ on:
     branches: [ main ]
 
 env:
-  IMAGE_FRONTEND: ghcr.io/${{ secrets.GHCR_USERNAME }}/vue-app
-  IMAGE_BACKEND: ghcr.io/${{ secrets.GHCR_USERNAME }}/go-api
+  IMAGE_FRONTEND: ghcr.io/${{ secrets.GHCR_USERNAME }}/frontend
+  IMAGE_BACKEND: ghcr.io/${{ secrets.GHCR_USERNAME }}/backend
 
 jobs:
   build-and-push:
