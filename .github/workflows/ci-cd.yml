@@ -5,8 +5,8 @@ on:
     branches: [ main ]
 
 env:
-  IMAGE_FRONTEND: ghcr.io/${{ secrets.GHCR_USERNAME }}/vue-app
-  IMAGE_BACKEND: ghcr.io/${{ secrets.GHCR_USERNAME }}/go-api
+  IMAGE_FRONTEND: ghcr.io/${{secrets.GHCR_USERNAME}}/vue-app
+  IMAGE_BACKEND: ghcr.io/${{secrets.GHCR_USERNAME}}/go-api
 
 jobs:
   build-and-push:
@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Login to GHCR
-        run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ secrets.GHCR_USERNAME }}" --password-stdin
+        run: echo "${{secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{secrets.GHCR_USERNAME}}" --password-stdin
 
       - name: Build and Push Frontend
         run: |
